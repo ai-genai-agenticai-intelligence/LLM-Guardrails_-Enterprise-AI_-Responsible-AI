@@ -1,0 +1,22 @@
+# Environment Variables (Private keys and secrets)
+.env
+*.env
+*.env.local
+
+# Virtual Environment
+myenv/
+venv/
+env/
+.venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+*.log
