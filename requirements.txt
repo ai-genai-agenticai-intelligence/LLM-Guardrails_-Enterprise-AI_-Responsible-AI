@@ -1,9 +1,9 @@
-fastapi
-uvicorn[standard]
-jinja2
-python-dotenv
+fastapi #Created API handled the request
+uvicorn[standard] # Run the Application
+jinja2 #Created the webpage
+python-dotenv #Loads API key form 
 google-genai
 pydantic
-streamlit
-gunicorn
+#streamlit
+#gunicorn
 

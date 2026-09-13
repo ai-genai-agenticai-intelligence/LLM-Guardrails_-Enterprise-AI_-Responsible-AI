@@ -16,6 +16,7 @@ GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
 # Streamlit Cloud secrets support
 if not GEMINI_API_KEY:
     try:
+        # pyrefly: ignore [missing-import]
         import streamlit as st
         if hasattr(st, "secrets") and "GEMINI_API_KEY" in st.secrets:
             GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]

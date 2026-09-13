@@ -26,24 +26,20 @@ app = FastAPI(
     ),
     version="1.0.0",
 )
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent
-
 # ============================================================
 # Static Files
 # ============================================================
 
 app.mount(
     "/static",
-    StaticFiles(directory=str(BASE_DIR / "static")),
+    StaticFiles(directory="static"),
     name="static",
 )
 # ============================================================
 # Templates
 # ============================================================
 templates = Jinja2Templates(
-    directory=str(BASE_DIR / "templates")
+    directory="templates"
 )
 # ============================================================
 # Request Model
@@ -134,11 +130,3 @@ async def generate(request: PromptRequest):
         ),
         "response": model_response
     }
-
-
-if __name__ == "__main__":
-    import os
-    import uvicorn
-
-    port = int(os.environ.get("PORT", 8000))
-    uvicorn.run("app:app", host="0.0.0.0", port=port)
