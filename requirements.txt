@@ -5,3 +5,5 @@ python-dotenv
 google-genai
 pydantic
 streamlit
+gunicorn
+
