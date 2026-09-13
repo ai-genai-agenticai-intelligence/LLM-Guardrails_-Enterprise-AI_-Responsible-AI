@@ -4,3 +4,4 @@ jinja2
 python-dotenv
 google-genai
 pydantic
+streamlit
